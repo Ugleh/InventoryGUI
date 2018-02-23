@@ -1,47 +1,53 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.idea/
+.loadpath
+.recommenders
 
-# Folder config file
-Desktop.ini
+# External tool builders
+.externalToolBuilders/
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Locally stored "Eclipse launch configurations"
+*.launch
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
 
-# Windows shortcuts
-*.lnk
+# CDT-specific (C/C++ Development Tooling)
+.cproject
 
-# =========================
-# Operating System Files
-# =========================
+# Java annotation processor (APT)
+.factorypath
 
-# OSX
-# =========================
+# PDT-specific (PHP Development Tools)
+.buildpath
 
-.DS_Store
-.AppleDouble
-.LSOverride
+# sbteclipse plugin
+.target
 
-# Thumbnails
-._*
+# Tern plugin
+.tern-project
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
+# TeXlipse plugin
+.texlipse
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+.project
+.classpath

@@ -1,0 +1,14 @@
+name: ExampleInventoryGUI
+main: com.ugleh.inventorygui.example.ExampleInventoryGUI
+description: A Test.
+author: Ugleh
+version: 1.0
+permissions:
+  example.menuusage:
+    description: Permission to use this Plugin.
+    default: true
+commands:
+  example:
+    default: true
+    description: Usage of Example command.
+    permission: example.menuusage

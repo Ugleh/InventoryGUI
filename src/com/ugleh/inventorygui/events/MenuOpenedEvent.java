@@ -1,3 +1,13 @@
+/**
+* The InventoryGUI Library enables other developers to not have to reinvent he wheel
+* Using custom events you no longer need to worry about the inventory click event again.
+* let us worry about which menu gets opened.
+*
+* @author  Ugleh
+* @version 1.0
+* @since   2018-02-23 
+*/
+
 package com.ugleh.inventorygui.events;
 
 import org.bukkit.entity.Player;
@@ -7,13 +17,22 @@ import org.bukkit.event.HandlerList;
 
 import com.ugleh.inventorygui.InventoryMenu;
 
-public class MenuOpenedEvent extends Event implements Cancellable{
+public class MenuOpenedEvent extends Event implements Cancellable {
 
-	private static final HandlerList handlers  = new HandlerList();
+	private static final HandlerList handlers = new HandlerList();
 	private boolean cancelled;
 	private InventoryMenu inventoryMenu;
 	private Player player;
-	
+
+	/**
+	 * This Event is used to notify when a player has opened said menu. Mostly
+	 * used for sending a message or something.
+	 * 
+	 * @param inventoryMenu
+	 *            This is the InventoryMenu being opened.
+	 * @param player
+	 *            This is the player that is doing the opening.
+	 */
 	public MenuOpenedEvent(InventoryMenu inventoryMenu, Player player) {
 		this.inventoryMenu = inventoryMenu;
 		this.player = player;
@@ -34,17 +53,22 @@ public class MenuOpenedEvent extends Event implements Cancellable{
 	public HandlerList getHandlers() {
 		return handlers;
 	}
-	
-	public static HandlerList getHandlerList()
-	{
+
+	public static HandlerList getHandlerList() {
 		return handlers;
 	}
 
+	/**
+	 * @return InventoryMenu This returns the inventory menu being used.
+	 */
 	public InventoryMenu getInventoryMenu() {
 		return inventoryMenu;
 	}
-	public Player getPlayer()
-	{
+
+	/**
+	 * @return Player This returns the Player that is doing the opening.
+	 */
+	public Player getPlayer() {
 		return this.player;
 	}
 }

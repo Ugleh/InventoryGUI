@@ -1,3 +1,13 @@
+/**
+* The InventoryGUI Library enables other developers to not have to reinvent he wheel
+* Using custom events you no longer need to worry about the inventory click event again.
+* let us worry about which menu gets opened.
+*
+* @author  Ugleh
+* @version 1.0
+* @since   2018-02-23 
+*/
+
 package com.ugleh.inventorygui.events;
 
 import org.bukkit.entity.Player;

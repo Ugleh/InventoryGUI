@@ -152,6 +152,42 @@ public class InventoryButton {
 	}
 
 	/**
+	 * InventoryButton Constructor that requires a Player to have permission.
+	 * 
+	 * @param displayName
+	 *            the name you want to give the Inventory.
+	 * @param itemStack
+	 *            the ItemStack you want the button to use.
+	 * @param toggledItemStack
+	 *            the ItemStack you want the button to use when toggled.
+	 * @param flag
+	 *            A String that can be used for anything but mostly for
+	 *            commands.
+	 * @param permissionNode
+	 *            Permission Node used to check if a player should be able to
+	 *            use said item.
+	 * @param permissionMessage
+	 *            Permission Message is sent to Player if they are not allowed
+	 *            to use said button.
+	 * @param lore
+	 *            Lore used to display details about the button.
+	 */
+	public InventoryButton(String displayName, ItemStack itemStack, ItemStack toggledItemStack, String flag,
+			String permissionNode, String permissionMessage, boolean handlePermission, List<String> lore) {
+		this.displayName = displayName;
+		this.itemStack = itemStack;
+		this.toggledItemStack = toggledItemStack;
+		this.flag = flag;
+		this.permissionNode = permissionNode;
+		this.permissionMessage = permissionMessage;
+		this.handlePermission = true;
+		this.lore = lore;
+		this.uniqueID = UUID.randomUUID();
+
+		updateButton();
+	}
+
+	/**
 	 * Method used to update the button after it has been created or edited.
 	 */
 	public void updateButton() {

@@ -212,6 +212,11 @@ public class InventoryMenu {
 		this.permissionMessage = permissionMessage;
 	}
 
+	public void setPermission(String permissionNode, String permissionMessage)
+	{
+		this.permissionNode = permissionNode;
+		this.permissionMessage = permissionMessage;
+	}
 	/**
 	 * Returns the flag you set previously.
 	 * 

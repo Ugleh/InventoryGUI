@@ -111,6 +111,7 @@ public class InventoryButton {
 		this.flag = flag;
 		this.permissionNode = permissionNode;
 		this.permissionMessage = permissionMessage;
+		this.handlePermission = true;
 		this.uniqueID = UUID.randomUUID();
 
 		updateButton();
@@ -143,6 +144,7 @@ public class InventoryButton {
 		this.flag = flag;
 		this.permissionNode = permissionNode;
 		this.permissionMessage = permissionMessage;
+		this.handlePermission = true;
 		this.uniqueID = UUID.randomUUID();
 
 		updateButton();
@@ -322,6 +324,12 @@ public class InventoryButton {
 		this.handlePermission = handlePermission;
 	}
 	
+	public void setPermission(String permissionNode, String permissionMessage, boolean handlePermission)
+	{
+		this.permissionMessage = permissionMessage;
+		this.permissionNode = permissionNode;
+		this.handlePermission = handlePermission;
+	}
 	/**
 	 * Method used to check if the button is in its toggled state.
 	 * 

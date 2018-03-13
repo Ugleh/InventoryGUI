@@ -21,7 +21,7 @@ import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.plugin.Plugin;
 
-import com.ugleh.inventorygui.events.ButtonClickedEvent;
+import com.ugleh.inventorygui.events.ButtonClickEvent;
 import com.ugleh.inventorygui.events.MenuOpenedEvent;
 
 public class InventoryGUI implements Listener{
@@ -78,7 +78,7 @@ public class InventoryGUI implements Listener{
 					}
 				}
 				
-				ButtonClickedEvent buttonClickedEvent = new ButtonClickedEvent(inventoryButton, inventoryMenu, p, e.getClick());
+				ButtonClickEvent buttonClickedEvent = new ButtonClickEvent(inventoryButton, inventoryMenu, p, e.getClick());
 				Bukkit.getServer().getPluginManager().callEvent(buttonClickedEvent);
 				if(!buttonClickedEvent.isCancelled())
 				{

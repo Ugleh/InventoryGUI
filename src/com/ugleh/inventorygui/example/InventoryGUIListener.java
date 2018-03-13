@@ -23,6 +23,7 @@ public class InventoryGUIListener implements Listener {
 	public InventoryGUIListener(Plugin plugin) {
 		InventoryGUI inventoryGUI = new InventoryGUI(plugin);
 		InventoryMenu invMenu = new InventoryMenu(ChatColor.DARK_PURPLE + "Example Menu", 9);
+		ourPersonalMenus.put("example_menu", invMenu);
 		inventoryGUI.registerMenu(invMenu);
 
 		InventoryButton sendToSpawn = new InventoryButtonBuilder()

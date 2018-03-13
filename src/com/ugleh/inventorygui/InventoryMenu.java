@@ -21,11 +21,11 @@ import org.bukkit.inventory.Inventory;
 
 public class InventoryMenu {
 	private int slotAmount; //Used to set the Inventories slot amount. This may not equal the same as the actual inventory amount.
-	private String displayName; //Display name given to the inventory.
+	private String displayName = ""; //Display name given to the inventory.
 	private Inventory inventory; //The stored inventory for the Inventory menu.
-	private String permissionNode; //Permission string node checked when the inventory is attempted to open.
-	private String permissionMessage; //Permission message sent to the player if they do not have permission.
-	private String flag; //A flag saved for any reason at all. It is just a custom string you can use.
+	private String permissionNode = ""; //Permission string node checked when the inventory is attempted to open.
+	private String permissionMessage = ""; //Permission message sent to the player if they do not have permission.
+	private String flag = ""; //A flag saved for any reason at all. It is just a custom string you can use.
 	public UUID uniqueID; //Unique ID that is given to InventoryMenu when it is initiated.
 	public Sound allowedSound = Sound.ENTITY_CHICKEN_EGG; //Default Allowed Button Press sound for InventoryMenu buttons.
 	public Sound deniedSound = Sound.ENTITY_EVOCATION_ILLAGER_AMBIENT; //Default Denied Button Press sound for InventoryMenu buttons.

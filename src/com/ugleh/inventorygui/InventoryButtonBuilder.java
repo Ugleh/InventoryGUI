@@ -18,8 +18,8 @@ public class InventoryButtonBuilder {
 	private String flag; // String used for anything. I use it for commands.
 	
 	public InventoryButton build() {
-		return new InventoryButton(displayName, itemStack, toggledItemStack, flag, permissionNode, permissionMessage);
-
+		return new InventoryButton(displayName, itemStack, toggledItemStack, flag, permissionNode, permissionMessage, handlePermission, lore);
+		
 	}
 
 	public String getDisplayName() {
@@ -65,6 +65,7 @@ public class InventoryButtonBuilder {
 	public InventoryButtonBuilder setPermission(String permissionNode, String permissionMessage) {
 		this.permissionNode = permissionNode;
 		this.permissionMessage = permissionMessage;
+		this.handlePermission = true;
 		return this;
 	}
 	
@@ -76,10 +77,6 @@ public class InventoryButtonBuilder {
 		return handlePermission;
 	}
 
-	public InventoryButtonBuilder setHandlePermission(boolean handlePermission) {
-		this.handlePermission = handlePermission;
-		return this;
-	}
 
 	public boolean isToggleState() {
 		return toggleState;
